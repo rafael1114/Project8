@@ -1,0 +1,60 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+input.ng-invalid {
+    background-color: pink;
+}
+
+input.ng-valid {
+    background-color: none;
+}
+
+.label-right {
+    float:right;
+}
+
+.btn-q {
+    width: 110px;
+    height: 30px;
+    font-weight: 800;
+    border-width: thin;    
+}
+
+.tbl-queue {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 40%;
+}
+
+.sub-content {
+    text-align:center;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: right !important;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.active-cust {
+    margin-right:55px;
+}

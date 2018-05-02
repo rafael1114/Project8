@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2></h2>
+<br />
+<div ng-app="myApp" ng-controller="queueCtrl">
+    <div dir="auto">
+        <div class="queue-content">
+            <label for="fname">שם פרטי</label> <input id="fname" type="text" ng-model="firstName" placeholder="הכנס שם פרטי" required autofocus>
+            <label for="lname">שם משפחה</label> <input id="lname" type="text" ng-model="lastName" placeholder="הכנס שם משפחה" required>
+            <input id="queueNewCust" type="button" value="הכנס לתור" ng-click="insertNewCustomer()" class="btn-q" />
+            <br><br /><br />
+            <div class="next-cust">
+                <input type="button" value="קרא להבא בתור" ng-click="getNextCustomer()" class="btn-q" />
+            </div>
+            <br />
+            <label for="activeCust" class="label-right">בשירות</label>
+            <div id="activeCust" class="active-cust">
+                <table class="tbl-queue">
+                    <tr ng-repeat="cust in nextCustomer">
+                        <td>{{cust.QueueID}}</td>
+                        <td>{{cust.CustomerName}}</td>
+                        <td>{{cust.QueueTime}}</td>
+                    </tr>
+                </table>
+            </div>
+            <br /><br />
+            
+            <label>רשימת ממתינים</label>
+            <div id="tbl-q">
+                <table class="tbl-queue">
+                    <tr>
+                        <th>
+                            מספר תור
+                        </th>
+                        <th>
+                            שם לקוח
+                        </th>
+                        <th>
+                            שעת כניסה לתור
+                        </th>
+                    </tr>
+                    <tr ng-repeat="cust in waitList">
+                        <td>{{cust.QueueID}}</td>
+                        <td>{{cust.CustomerName}}</td>
+                        <td>{{cust.QueueTime}}</td>
+                    </tr>
+                </table>
+            </div>
+            <br /><br />
+        </div>
+        <br>
+    </div>
+</div>
+
